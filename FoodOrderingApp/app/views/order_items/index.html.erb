@@ -1,0 +1,18 @@
+<h1>Listing Orders</h1>
+
+<table>
+  <tr>
+    <th>Order Number</th>
+    <th>Menu Item</th>
+    <th>Quantity</th>
+
+  </tr>
+
+  <% @order_items.each do |order_item| %>
+      <tr>
+        <td><%= order_item.order_id %></td>
+        <td><%= MenuItem.find(order_item.menu_item_id).name %></td>
+        <td><%= order_item.quantity %></td>
+      </tr>
+  <% end %>
+</table>

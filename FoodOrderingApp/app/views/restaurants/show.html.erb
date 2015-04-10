@@ -1,0 +1,44 @@
+<h1><%= @restaurant.name %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @restaurant.description %>
+<br/>
+  <strong>Location:</strong>
+  <%= @restaurant.location %>
+<br/>
+  <strong>Email:</strong>
+  <%= @restaurant.email %>
+<br/>
+  <strong>Phone:</strong>
+  <%= @restaurant.telephone %>
+</p>
+<% @menu_items.each do |menu_item| %>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= menu_item.name %></h3>
+  </div>
+
+ <div class="panel-body">
+<%if user_signed_in? %>
+     <%= form_for @order_item, remote: true do |f| %>
+	<h4>Desctiption: <%= menu_item.description %></h4>
+	<h4>Price: <%= menu_item.price %></h4>
+        <h4>  <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <%= f.hidden_field :menu_item_id, value: menu_item.id %>
+          <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+        </div></h4>
+     <% end %>
+    <% else %>
+        <h4>Please sign in to create order </h4>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<%#= render "menu_items/menu_item_row", menu_item: menu_item, order_item: @order_item %>
+
+
+

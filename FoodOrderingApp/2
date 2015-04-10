@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20150324033149_create_orders.rb
+      create    app/models/order.rb
+      invoke    test_unit
+      create      test/unit/order_test.rb
+      create      test/fixtures/orders.yml

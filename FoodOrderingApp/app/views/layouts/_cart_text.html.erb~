@@ -1,0 +1,3 @@
+<%if user_signed_in?%>
+<%= link_to "Items in Cart #{current_order.order_items.size}", cart_path, class: "btn btn-link" %>
+<%end%>

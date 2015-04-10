@@ -1,0 +1,36 @@
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+            <h1>Welcome to Food Ordering System!</h1>
+            <p>Food Ordering System allows you to view menues form restaurants around UOIT. The system also allows you to place an online pickup order to desired location. To view all the restaurants available please press the button below, you may also order from the featured restaurants listed bwlow.</p>
+            <p><a href="/restaurants" class="btn btn-primary btn-large">View Restaurants</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Featured Restaurants</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Currently Static</h3>
+                        <p>Resturents will appear based on data mining.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">View Menu</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>

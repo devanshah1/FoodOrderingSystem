@@ -1,0 +1,14 @@
+/**
+ * Created by saasbook on 24/03/15.
+ */
+<% if @order.errors.any? || @order_item.errors.any? %>
+var errlogItem = "<%=j @order_item.as_json.to_s %>"
+var errlogOrder = "<%=j @order.as_json.to_s %>"
+
+alert("not valid. Order: " + errlogOrder + " *** Item:")
+
+
+
+<% else %>
+$(".cart-text").html("<%= escape_javascript(render 'layouts/cart_text') %>")
+<% end %>

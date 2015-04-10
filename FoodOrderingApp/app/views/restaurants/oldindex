@@ -1,0 +1,21 @@
+<h1>Restaurants</h1>
+
+<table class="table table-hover">
+  <tr>
+    <th>Restaurant</th>
+    <th>Type of food</th>
+    <th>Service Hours</th>
+    <th>Phone Number</th>
+
+  </tr>
+  <% @restaurants.each do |restaurant| %>
+      <tr>
+
+        <td><%= link_to "#{restaurant.name}", restaurant_path(restaurant) %></td>
+        <td><%= restaurant.description %></td>
+        <td><%= restaurant.service_hours %></td>
+        <td><%= restaurant.telephone %></td>
+
+      </tr>
+  <% end %>
+</table>

@@ -1,0 +1,346 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+4, h5, h6,
+h1, h2, h3 {margin-top: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+html, body{
+   font-family: 'Arimo', sans-serif;
+   font-size: 100%;
+   background:#fff; 
+}
+body a{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.logo{
+	float: left;
+}
+.logo320{
+	display:none;
+}
+div#home {
+	padding: 3em 0px 6em 0px;
+	background: #D23131;
+	position: relative;
+}
+.top-nav ul li a {
+	color: #D23131;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	padding: 0px 13px;
+	background: #fff;
+}
+.top-nav ul li.active a,
+.top-nav ul li a:hover{
+	color:#fff;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	background: #000;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.top-nav ul li a span{
+	background:url(../images/sprit-1.png) no-repeat 0px -1px;
+	width:22px;
+	height:22px;
+	display:inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.logo a{
+	display:block;
+}
+.logo a img {
+	width: 100%;
+}
+/* top-nav */
+.top-nav:before,
+.top-nav:after {
+    content: " ";
+    display: table;
+}
+.top-nav:after {
+    clear: both;
+}
+.top-nav {
+	float: right;
+}
+.top-nav ul {
+	padding: 0;
+	float: right;
+	margin-top: 12px;
+}
+.top-nav li {
+	display: inline;
+	float: left;
+	position:relative;
+}
+.top-nav a {
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+}
+.top-nav a:hover{
+	text-decoration:none;
+	color:#00A2C1;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+/*--end-header--*/
+/*--start-navgation--*/
+.search2 {
+	position: relative;
+	background: #fff;
+	padding: 5px 0px;
+	width: 18%;
+	float: right;
+	margin: 7px 6em 0px 0em;
+}
+.search2 input[type="text"] {
+	outline: none;
+	color: rgba(0, 0, 0, 0.34);
+	padding-left: 10px;
+	background: none;
+	font-size: 15px;
+	border: none;
+	width: 79.33%;
+}
+.search2 input[type="submit"] {
+	background: url('../images/sprit-1.png') no-repeat -22px 0px;
+	padding: 0px 15px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	outline: none;
+	margin: 2px 0px 0px 13px;
+}
+ul.nav li {
+	display: inline-block;
+	margin: 0px 8px;
+}
+.menu {
+	width: 60%;
+	float: left;
+	margin-left: 3em;
+}
+.navgation {
+	position: absolute;
+	width: 77%;
+	top: 83%;
+	left: 12%;
+	background: #31353e;
+	padding: 10px 10px;
+}
+.menu li a{
+  	display: block;
+	font-size: 18px;
+	font-weight:400;
+	color:#fff;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	text-align:center;
+}
+#nav .current a {
+    	color:#fb326f;
+   	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.menu li a:hover,.menu li a.active{
+	color:#D23131;
+} 
+.toggleMenu {
+	display:  none;
+    	border-radius:2em; 
+    	-webkit-border-radius:2em;
+    	-moz-border-radius:2em;
+    	-o-border-radius:2em; 
+    	float:right;
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+}
+.nav > li > a {
+	margin: 0px 10px;
+	padding: 10px 4px;
+}
+@media screen and (max-width:800px) {
+    .active {
+        display: block;
+    }
+    
+    .nav {
+	list-style: none;
+	width: 100%;
+	position: absolute;
+	right: 0px;
+	top: 50px;
+	z-index: 9999;
+	}
+   .menu li a span.messages{
+    	text-align:center;
+    	top:15px;
+    }
+    .nav li ul{
+    	width:100%;   	
+    }
+    .menu ul{
+    	margin:0;
+    }
+    .nav > li.hover > ul {
+        width:100%;
+    }
+    .nav > li {
+        float: none;
+        display:block;
+    }
+    .nav ul {
+        display: block;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+     .nav li:first-child a{
+     	border-top:none;
+	display: block;
+     }
+ }
+ @media (max-width:768px){
+.toggleMenu img {
+	width: 95%;
+	margin-top: 2px;
+}
+.menu ul.nav{
+	margin-top:0px;
+}
+ul.nav{
+        display:none;
+	background:#000;
+	border:1px solid #fff;
+	padding: 7px 0px;
+}
+.menu ul.nav li{
+       	display:block;
+       	text-align:center;
+      	margin:1px;
+      	padding: 5px;
+}
+}
+/*--end-navgation--*/
+/*--start-banner--*/
+.banner{
+	background:url(../images/bnr.jpg) no-repeat;
+	min-height:600px;
+	background-size:100% 100%;
+} 
+.bnr-text{
+	text-align:center;
+	margin-top: 20%;
+}
+.bnr-text h1 {
+	color: #fff;
+	font-size: 2.8em;
+	width: 80%;
+	margin: 0 auto;
+	font-weight: 600;
+}
+.bttn a{
+	border: 1px solid #D23131;
+	font-size: 1.5em;
+	font-weight: 600;
+	color: #fff;
+	outline: none;
+	padding: 14px 2.2em;
+}
+.bttn a:hover{
+	color:#D23131;
+	border: 1px solid #fff;
+	text-decoration:none;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+.bttn {
+	margin-top: 3em;
+}
+/*--end-banner--*/
+/*--start-footer--*/
+.footer-text p{
+	color:#fff;
+	text-align:right;
+	font-size:15px;
+	font-weight: 600;
+}
+.footer-text p a{
+	color:#c79c2b;
+}
+.footer-text p a:hover{
+	color:#fff;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	text-decoration:none;
+}
+.footer{
+	background:#868686;
+	padding:3em 0px;
+}
+/*--end-footer--*/
+#toTop {
+display: none;
+text-decoration: none;
+position: fixed;
+bottom: 10px;
+right: 10px;
+overflow: hidden;
+width: 48px;
+height: 48px;
+border: none;
+text-indent: 100%;
+background: url(../images/top.png) no-repeat 0px 0px;
+}

@@ -1,0 +1,27 @@
+<table id="restaurants">
+
+  <tr>
+    <th>MenuItem</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+
+
+      <tr>
+        <td><%= menu_item.name %></td>
+        <td><%= menu_item.description %></td>
+        <td><%= menu_item.price %></td>
+        <%= form_for :order_item, remote: true do |f| %>
+
+          <td>  <div class="input-group">
+              <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+                <%= f.hidden_field :menu_item_id, value: menu_item.id %>
+                <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+            </div></td>
+        <% end %>
+
+
+      </tr>
+
+  </table>

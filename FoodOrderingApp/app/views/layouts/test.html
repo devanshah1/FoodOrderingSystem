@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title> Food Ordering System</title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="description" content="An example of a fixed-position(sticky) top navigation bar that remains visible while the user scrolls the page.">
+  <meta name="author" content="Six Revisions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/    respond.js/1.4.2/respond.min.js"></script><![endif]-->
+
+
+</head>
+<div id='cssmenu'>
+  <body>
+
+  <nav class="fixed-nav-bar">
+    <div id="menu" class="menu">
+      <a class="sitename" href="/">Food Ordering System</a>
+      <!--  <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>  -->
+      <a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
+      <ul class="menu-items">
+        <li><a href="/restaurants">Home</a></li>
+
+        <% if user_signed_in? %>
+            Signed in as <%= current_user.first_name %>. Not you?
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+            <%= link_to "Login", new_user_session_path %>
+        <% end %>
+
+        <% if restaurant_owner_signed_in? %>
+            Signed in as <%= current_restaurant_owner.email %>. Not you?
+            <%= link_to "Sign out", destroy_restaurant_owner_session_path, :method => :delete %>
+        <% end %>
+
+        <%= render 'layouts/cart_text' %>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <section class="some-related-articles">
+
+    <p>  <%= yield %></p>
+
+  </section>
+  </body>
+
+  <footer>  <%= link_to "For Restaurants", new_restaurant_owner_session_path %></footer>
+
+</div>
+</html>
